@@ -28,3 +28,11 @@ C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Mono.Cecil.Mdb.d
 C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Mono.Cecil.Rocks.dll
 C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\nunit.framework.dll
 C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\nunit.framework.xml
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Castle.Core.dll
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Moq.dll
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Castle.Core.xml
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\Moq.xml
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\GitProjects\UnitTest\TestNinja\TestNinja.UnitTests\bin\Debug\System.Threading.Tasks.Extensions.xml
