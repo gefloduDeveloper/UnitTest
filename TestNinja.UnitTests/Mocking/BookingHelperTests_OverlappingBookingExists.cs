@@ -72,7 +72,60 @@ namespace TestNinja.UnitTests.Mocking
             Assert.That(result, Is.EqualTo(_existingBooking.Reference));
         }
 
-        private DateTime Before(DateTime dateTime, int days=1)
+        [Test]
+        public void BookingStartsAndFinishesInTheMiddleOfAnExistingBooking_RetunExistingBookingsReference()
+        {
+            var result = BookingHelper.OverlappingBookingsExist(new Booking
+            {
+                Id = 1,
+                ArrivalDate = After(_existingBooking.ArrivalDate),
+                DepartureDate = Before(_existingBooking.DepartureDate)
+            }, _repository.Object);
+
+            Assert.That(result, Is.EqualTo(_existingBooking.Reference));
+        }
+
+        [Test]
+        public void BookingStartsInTheMiddleOfAnExistingBookingAndFinishesAfter_RetunExistingBookingsReference()
+        {
+            var result = BookingHelper.OverlappingBookingsExist(new Booking
+            {
+                Id = 1,
+                ArrivalDate = After(_existingBooking.ArrivalDate),
+                DepartureDate = After(_existingBooking.DepartureDate)
+            }, _repository.Object);
+
+            Assert.That(result, Is.EqualTo(_existingBooking.Reference));
+        }
+
+        [Test]
+        public void BookingAndFinishesAfterAnExistingBooking_RetunEmptyString()
+        {
+            var result = BookingHelper.OverlappingBookingsExist(new Booking
+            {
+                Id = 1,
+                ArrivalDate = After(_existingBooking.DepartureDate),
+                DepartureDate = After(_existingBooking.DepartureDate,days:5)
+            }, _repository.Object);
+
+            Assert.That(result, Is.Empty);
+        }
+
+        [Test]
+        public void BookingsOverlapButNewBookingIsCancelled_RetunEmptyString()
+        {
+            var result = BookingHelper.OverlappingBookingsExist(new Booking
+            {
+                Id = 1,
+                ArrivalDate = After(_existingBooking.DepartureDate),
+                DepartureDate = After(_existingBooking.DepartureDate, days: 5),
+                Status = "Cancelled"
+            }, _repository.Object);
+
+            Assert.That(result, Is.Empty);
+        }
+
+        private DateTime Before(DateTime dateTime, int days = 1)
         {
             return dateTime.AddDays(-days);
         }
