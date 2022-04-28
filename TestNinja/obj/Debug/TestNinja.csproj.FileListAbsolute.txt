@@ -24,3 +24,4 @@ C:\GitProjects\UnitTest\TestNinja\TestNinja\obj\Debug\TestNinja.csproj.CoreCompi
 C:\GitProjects\UnitTest\TestNinja\TestNinja\obj\Debug\TestNinja.csproj.CopyComplete
 C:\GitProjects\UnitTest\TestNinja\TestNinja\obj\Debug\TestNinja.dll
 C:\GitProjects\UnitTest\TestNinja\TestNinja\obj\Debug\TestNinja.pdb
+C:\GitProjects\UnitTest\TestNinja\TestNinja\obj\Debug\TestNinja.csproj.AssemblyReference.cache
